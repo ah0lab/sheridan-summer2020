@@ -1,0 +1,23 @@
+.gridArea {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto;
+    grid-template-areas: "imgArea listArea";
+    grid-gap: 10px;
+}
+
+.common {
+    background-color: bisque;
+    border: thick solid navy; 
+    padding: 10px;
+    margin: 10px;
+}
+
+.imgArea {
+    grid-area: imgArea;
+    text-align: center;
+}
+
+.listArea {
+    grid-area: listArea;
+}
