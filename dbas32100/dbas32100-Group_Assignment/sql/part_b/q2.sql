@@ -1,0 +1,10 @@
+----------------------------------
+-- QUESTION 2 
+--  Create a stored procedure which 
+--  accepts a customer name as an 
+--  argument and displays the total 
+--  amount the customer has spent 
+--  buying cars. Use car database.
+--
+-- Contributor : 
+----------------------------------
