@@ -1,0 +1,48 @@
+/* Local Storage */
+body {background: radial-gradient(silver, lightblue, lightgrey);}
+
+.gridArea {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas:
+	"pick students"
+	;
+	gap: 5px;
+}
+
+/* Define the two columns */
+#students {grid-area: students;}
+.pick {grid-area: pick; }
+
+h1, h2 {text-align: center; color: navy;}
+select {font-size: 1.25em; color: navy;}
+
+.group {display: flex;}
+label {flex: 1;}
+input {flex: 2;}
+
+#report {
+	border: thick solid black;
+	padding: 0px 20px 0px 20px;
+	background-color: ivory;
+	font-size: 1.15em;
+	grid-area: report;
+}
+
+a {border: thin solid navy; 
+	border-radius: 10px; 
+	text-decoration: none;
+	padding: 5px; 
+}
+
+@media print {
+  .gridArea {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "report"
+    ;
+	}
+	#printData {display: none;}
+	#goBack {display: none;}
+}

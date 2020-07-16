@@ -1,0 +1,29 @@
+/* selectors/actions/dom - Page 2*/
+.gridArea {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "goback"
+    "buttons2"
+    "sections"
+  ;
+  place-items: center;
+  gap: 10px;
+}
+
+#buttons2 {grid-area: buttons2; display: flex;}
+#buttons2 button {flex: 1; margin: 5px; width: 200px; height: 65px; color: navy;}
+
+#sections {grid-area: sections; font-size: 0.75em;}
+
+#goback{grid-area: goback;}
+
+.gifBorder{border: thick solid navy;}
+.h2Style {text-align: center; font-family: Times New Roman; color: white; background: navy;}
+
+.smallimg {width: 20px;}
+
+.anchorCSS { border-radius: 50px; background-color: navy; 
+  font-size: 1em; text-decoration: none; color: white; padding: 5px;
+  text-align: center;}
