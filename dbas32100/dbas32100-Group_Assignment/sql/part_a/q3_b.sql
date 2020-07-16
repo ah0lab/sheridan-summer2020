@@ -1,8 +1,0 @@
-----------------------------------
--- QUESTION 3 - B
---  Show the movies which has least 
---  renting cost and highest renting 
---  cost? Display their names/titles.
---
--- Contributor : 
-----------------------------------

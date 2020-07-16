@@ -1,8 +1,0 @@
-----------------------------------
--- QUESTION 3 - D
---  Show the names of the customers 
---  and the number of movies rented 
---  by him.
---
--- Contributor : Benjamin Ahola
-----------------------------------
