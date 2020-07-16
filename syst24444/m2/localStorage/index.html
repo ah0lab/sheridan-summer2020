@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Local Storage</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/main.css" rel="stylesheet">
+<script src="js/localStorage.js"></script>
+</head>
+
+<body onload="createList()">
+	<div class="gridArea">
+		<section class="pick">
+			<h2>Select a student based on Student ID to print a payment report:</h2>
+			<select id="selectBox" onchange="makeReport()"> </select>
+		</section>
+		
+		<section id="students">
+		</section>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<!-- jquerySA2.html for selectorsActions -->
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery Example/Page 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../js/jquery.js"></script>
+
+	<script src="../js/jquerySA2.js"></script>
+	<link href="../css/page2.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="gridArea">
+	<a href="../index.html" id="goback" class="anchorCSS">Click to go back ... </a>
+
+	<div id="buttons2">
+		<button id="startsWithEx">Change text to red for any section whose <strong>title attribute starts with 'Text'</strong></button>
+		<button id="containsEx">Change text to italic for any section <strong>that contains the word 'color'</strong></button>
+		<button id="hasEx">Underline text for any <strong>section that has a paragraph that contains the text 'para3'</button>
+	</div>
+
+	<div id="sections">
+		<section id="clickMe" title="Text area used for click">
+			<strong>Click for a message</strong>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae
+			enim justo. Mauris eget augue id lorem consequat laoreet.  <img src='../images/Canada_flag.jpg' class='smallimg'>
+			<p>Paragraph for para1</p>
+		</section><hr>
+		<section id="slide" title="Text area used for slide example">
+			<img src='../images/logical.gif' class='smallimg'> <strong>Click on this paragraph for slide example.</strong> Donec eu neque nunc color. Pellentesque pharetra nibh scelerisque tellus tincidunt in volutpat augue semper. Duis vitae sem eros. 
+			<p>Paragraph for para2</p>
+		</section><hr>
+		<section id="fade" title="Callback example">
+			<strong>Click on this paragraph for fade example.</strong> Pellentesque pharetra nibh scelerisque tellus tincidunt in volutpat
+			augue semper. Duis vitae sem eros.<img src='../images/ontario.png' class='smallimg'>
+			<p>Paragraph for para3</p>
+		</section><hr>
+	
+		<!-- used to hold go back image -->
+		<section id="callBack"></section>
+	</div>
+
+</div>
+</body>
+</html>
