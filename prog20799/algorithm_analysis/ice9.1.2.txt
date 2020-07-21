@@ -1,0 +1,9 @@
+Algorithm getAverage(A, n)
+    Input  array A of n integers
+    Output average of integers in A
+
+total <- 0
+for i <- 0 to n - 1 do
+    total <- total + A[i]
+
+return total / n
