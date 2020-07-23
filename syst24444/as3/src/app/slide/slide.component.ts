@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Slide } from '../model/slide.model'
 
 @Component({
   selector: 'app-slide',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlideComponent implements OnInit {
 
-  constructor() { }
+  constructor (slide : Slide) { }
 
-  ngOnInit(): void {
+  ngOnInit (): void {
   }
-
 }

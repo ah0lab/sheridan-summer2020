@@ -1,1 +1,13 @@
-<p>slider works!</p>
+<section class="slider">
+    <ul class="slider-slides">
+        <li class="slide" *ngFor="let slide of getSlides()">
+            <figure class="slide-content">
+                <img class="slide-img" src="{{slide.getSlideImage ()}}" />
+                <figcaption class="slide-details"> 
+                    <h4 class="slide-title">{{slide.getSlideTitle()}}</h4>
+                    <h5 class="slide-desc">{{slide.getSlideDesc()}}</h5>
+                </figcaption>
+            </figure>
+        </li>
+    </ul>
+</section>
