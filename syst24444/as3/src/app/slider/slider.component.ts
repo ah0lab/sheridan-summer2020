@@ -18,7 +18,7 @@ export class SliderComponent implements OnInit{
 
   public next() : void 
   {
-    if (this.currentIndex >= this.slides.length) 
+    if (this.currentIndex >= this.slides.length - 1) 
       this.currentIndex = 0;
     else 
       this.currentIndex++;
@@ -28,7 +28,7 @@ export class SliderComponent implements OnInit{
   public previous() : void 
   {
     if (this.currentIndex <= 0)
-      this.currentIndex = this.slides.length;
+      this.currentIndex = this.slides.length - 1;
     else 
       this.currentIndex--;
     return;
