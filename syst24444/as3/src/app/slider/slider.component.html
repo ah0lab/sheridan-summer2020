@@ -1,13 +1,13 @@
 <section class="slider">
-    <ul class="slider-slides">
-        <li class="slide" *ngFor="let slide of getSlides()">
-            <figure class="slide-content">
-                <img class="slide-img" src="{{slide.getSlideImage ()}}" />
-                <figcaption class="slide-details"> 
-                    <h4 class="slide-title">{{slide.getSlideTitle()}}</h4>
-                    <h5 class="slide-desc">{{slide.getSlideDesc()}}</h5>
-                </figcaption>
-            </figure>
-        </li>
-    </ul>
+    <figure class="slide-content">
+        <img class="slide-img" src="{{getSlideAt(getCurrentIndex()).getSlideImage ()}}" />
+        <figcaption class="slide-details"> 
+            <h4 class="slide-details-title">{{getSlideAt(getCurrentIndex()).getSlideTitle ()}}</h4>
+            <h5 class="slide-details-desc">{{getSlideAt(getCurrentIndex()).getSlideDesc ()}}</h5>
+        </figcaption>
+    </figure>
+    <nav class="slider-nav">
+        <button class="slider-nav-btn btn--next">Next</button>
+        <button class="slider-nav-btn btn--prev">Prev</button>
+    </nav>
 </section>

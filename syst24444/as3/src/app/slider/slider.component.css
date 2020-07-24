@@ -1,0 +1,31 @@
+.slider { 
+    position: relative;
+}
+.slider-slides { 
+    max-width: 1024px;
+    max-height: 500px;
+    overflow: hidden;
+}
+
+.slide { 
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+}
+.slide-content { background-color: #cac;}
+.slide-img { 
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.slide-details { }
+.slide-details-title { }
+.slide-details-desc { }
+.slider-nav {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+    .btn--prev, .btn--next {
+        position: absolute;
+    }
