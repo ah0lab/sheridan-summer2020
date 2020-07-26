@@ -17,24 +17,33 @@ int main (void)
 {
     char customerName[MAX_NAME_SIZE];
     float totalPrice = 0.0;
+
     bool requestEnd = false;
     int recordNumber = 0;
-
-
+    Queue customerRecords = initQueue ();
+    CustomerRecord record;
+    CustomerRecord removedRecord;
 
     while (!requestEnd) {
         printf ("Record #%d\n", recordNumber + 1);
 
         prompt_user (Prompt_Name); 
-        fgets(customerName, MAX_NAME_SIZE, stdin);
+        fgets(record.name, MAX_NAME_SIZE, stdin);
 
-        if (strlower (customerName) == 'end') continue;
+        if (strlower (record.name) == 'end') { requestEnd = true; continue; }
 
         prompt_user (Prompt_TotalPrice);
-        totalPrice = get_totalPrice ();
+        record.purchase_total = get_totalPrice ();
 
-        // Add to queue
+        enqueue(customerRecords, record);
     }
+
+    printf ("Current Queue\n");
+    print_records (customerRecords);
+
+    printf ("\nQueue with first record removed\n");
+    remove_record (customerRecords);
+    print_records (customerRecords);
 }
 
 float get_totalPrice ()
@@ -64,4 +73,13 @@ char* strlower (char *str)
     do { lowered_str[i] = tolower(*tmp++); i++; } while (*tmp != '\0');
 
     return lowered_str;
+}
+
+void print_records (Queue queue)
+{
+    NodePtr record = queue->head;
+    while (record != NULL) {
+        printf ("%s\t%f\n", record->data.name, record->data.purchase_total);
+        record = record->next;
+    }
 }
