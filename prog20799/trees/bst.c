@@ -1,18 +1,31 @@
 #include <stdlib.h>
 #include <stdio.h>
+// DEFINING A BINARY SEARCH TREE
 
+/*
+ * 1. Define a treenode struct 
+ *      with left and right pointers
+ */
 typedef struct treenode {
     NodeData data;
     struct treenode *left, *right;
 } TreeNode, *TreeNodePtr;
 
+/*
+ * 2. Define a BinaryTree containing 
+ *      the root node
+ */
 typedef struct {
     TreeNodePtr root;
 } *BinaryTree;
 
+/*
+ * 2. Define a BinaryTree containing 
+ *      the root node
+ */
 TreeNodePtr findOrInsert (BinaryTree bt, NodeData d)
 {
-    if (bt->root == NULL) return new TreeNode (d);
+    if (bt->root == NULL) return newTreeNode (d);
 
     TreeNodePtr curr = bt.root;
     int cmp;
