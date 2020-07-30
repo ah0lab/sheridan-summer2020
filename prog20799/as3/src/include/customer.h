@@ -2,6 +2,6 @@
 #include <stdlib.h>
 
 typedef struct {
-    const char *name;
+    char name[20];
     float purchase_total;
 } CustomerRecord;

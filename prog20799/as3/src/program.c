@@ -1,8 +1,9 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <string.h>
 
-#include "include/customer_queue.h"
+#include "queue.h"
 
 typedef enum {Prompt_Name, Prompt_TotalPrice} MenuOption;
 #define prompt_user(prompt) ((prompt == Prompt_Name)?\
@@ -10,19 +11,17 @@ typedef enum {Prompt_Name, Prompt_TotalPrice} MenuOption;
     printf ("\tEnter Total Price of Purchases : "))
 #define MAX_NAME_SIZE 20
 
+float get_totalPrice ();
 int strsize (char *);
 char* strlower (char *);
+void print_records (Queue);
 
 int main (void)
 {
-    char customerName[MAX_NAME_SIZE];
-    float totalPrice = 0.0;
-
     bool requestEnd = false;
     int recordNumber = 0;
     Queue customerRecords = initQueue ();
     CustomerRecord record;
-    CustomerRecord removedRecord;
 
     while (!requestEnd) {
         printf ("Record #%d\n", recordNumber + 1);
@@ -30,15 +29,17 @@ int main (void)
         prompt_user (Prompt_Name); 
         fgets(record.name, MAX_NAME_SIZE, stdin);
 
-        if (strlower (record.name) == 'end') { requestEnd = true; continue; }
+        if (strcmp (strlower (record.name), "end\n") == 0) { requestEnd = true; continue; }
+        printf (strlower(record.name));
 
         prompt_user (Prompt_TotalPrice);
         record.purchase_total = get_totalPrice ();
 
         enqueue(customerRecords, record);
+        recordNumber++;
     }
 
-    printf ("Current Queue\n");
+    printf ("\nCurrent Queue\n");
     print_records (customerRecords);
 
     printf ("\nQueue with first record removed\n");
@@ -59,7 +60,8 @@ int strsize (char *str) {
     int count = 0;
     char *tmp = str;
     while (*tmp++ != '\0') { count++; }
-    return tmp;
+
+    return count;
 }
 
 char* strlower (char *str) 
@@ -79,7 +81,7 @@ void print_records (Queue queue)
 {
     NodePtr record = queue->head;
     while (record != NULL) {
-        printf ("%s\t%f\n", record->data.name, record->data.purchase_total);
+        printf ("\t%s\t%.2f\t%.2f\n", record->data.name, record->data.purchase_total, record->data.purchase_total * 1.13);
         record = record->next;
     }
 }
