@@ -8,5 +8,6 @@ typedef struct {
     TreeNode *root;
 } BinaryTree;
 
-
 void insert (BinaryTree*, int);
+int lookup_and_count (BinaryTree*, int);
+TreeNode* newTreeNode (int);

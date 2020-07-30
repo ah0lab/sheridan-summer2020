@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "binarytree.h"
 
 
@@ -13,7 +14,7 @@ TreeNode* newTreeNode (int number)
 
 void insert (BinaryTree *tree, int number) 
 {
-    if (tree->root == NULL) return newTreeNode (number);
+    if (tree->root == NULL) tree->root = newTreeNode (number); 
 
     TreeNode *curr = tree->root;
 
