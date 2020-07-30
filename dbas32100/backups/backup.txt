@@ -1,0 +1,66 @@
+-- SQL TERMINAL
+    SQL> SHUTDOWN IMMEDIATE
+-- Provides access to the log files
+    SQL> STARTUP MOUNT
+    SQL> ALTER DATABASE NOARCHIVELOG
+-- If any logs are kept, reset values to 1
+    SQL> ALTER DATABASE OPEN;
+
+-- TERMINAL
+    $ pwd
+    /home/oracle
+    
+    SQL>
+-- SQL TERMINAL
+    SQL> create user u15 indentified by p15;
+    SQL> grant create session to u15; 
+    SQL> grant create table to u15;
+    SQL> connect u15/p15;
+    SQL> create table table_1(col1 number);
+    SQL> SELECT table_name from user_tables;
+    SQL> connect sys/oracle as sysdba;
+    SQL> SELECT file_name, Tablespace_name, 
+            FROM dba_data_files;
+    SQL> SHOW PARAMETER control_files;
+    SQL> SHUTDOWN IMMEDIATE
+
+-- TERMINAL
+    $ ls
+    $ cd u01/app/oracle/oradata/ORCl
+    $ mkdir ~/Desktop/bak5
+    $ cp * ~/Desktop/bak5/
+
+    SQL> 
+-- SQL TERMINAL
+    SQL> startup
+    SQL> connect u15/p15;
+    SQL> drop table table_1;
+    SQL> SHUTDOWN ABORT
+    SQL> 
+
+-- TERMINAL
+    $ ls
+    $ mv system.dbf ~/Desktop/
+
+-- SQL TERMINAL
+    SQL> startup
+    -- get error
+    SQL> SHUTDOWN
+
+-- TERMINAL
+    $ mv system.dbf ~/Desktop/ 
+    $ cp -v ~/Desktop/bckup5/* .
+
+-- SQL TERMINAL
+    SQL> STARTUP MOUNT
+
+    -- Should not recieve error
+    
+    -- Clear log files (group 3 may not exist)
+    SQL> ALTER DATABASE CLEAR LOGFILE GROUP 1;
+    SQL> ALTER DATABASE CLEAR LOGFILE GROUP 2;
+    SQL> ALTER DATABASE CLEAR LOGFILE GROUP 3;
+    SQL> ALTER DATABASE OPEN;
+    SQL> show user;
+    SQL> connect u15/p15;
+    SQL> SELECT Table_name from User_tables;
