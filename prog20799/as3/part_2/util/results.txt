@@ -1,0 +1,50 @@
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	5 comparisons were made to find '0' within tree.
+
+	84 comparisons were made to find '0' within array.
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	4 comparisons were made to find '49' within tree.
+
+	4 comparisons were made to find '49' within array.
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	38 comparisons were made to find '100' within tree.
+
+	83 comparisons were made to find '100' within array.
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	17 comparisons were made to find '30' within tree.
+
+	36 comparisons were made to find '30' within array.
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	31 comparisons were made to find '75' within tree.
+
+	86 comparisons were made to find '75' within array.
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	35 comparisons were made to find '79' within tree.
+
+	90 comparisons were made to find '79' within array.
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	12 comparisons were made to find '25' within tree.
+
+	31 comparisons were made to find '25' within array.
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	8 comparisons were made to find '5' within tree.
+
+	64 comparisons were made to find '5' within array.
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	2 comparisons were made to find '15' within tree.
+
+	21 comparisons were made to find '15' within array.
+#############################################
+Enter an integer (between 1 - 100) to search for: 
+	10 comparisons were made to find '55' within tree.
+
+	10 comparisons were made to find '55' within array.

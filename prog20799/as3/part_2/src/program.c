@@ -5,7 +5,7 @@
 #include "binarytree.h"
 
 #define MAX_READ 100
-#define IN_FILE_PATH "assets/integers.txt"
+#define IN_FILE_PATH "../assets/integers.txt"
 
 int* read_integers (const char *path) {
     int *integers = (int *)calloc (MAX_READ, sizeof (int));
