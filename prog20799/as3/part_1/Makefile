@@ -1,4 +1,4 @@
-obj=assignment3
+obj=part_1
 cc=gcc
 cflags=-Wall -fmax-errors=5 -Isrc/include/
 ldflags=-Lbuild/ -lqueue
