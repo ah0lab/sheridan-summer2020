@@ -54,7 +54,7 @@ void inOrder (TreeNodePtr node)
     if (node != NULL) {
         inOrder (node->left);
         visit (node);
-        preOrder (node->right);
+        inOrder (node->right);
     }
 }
 
