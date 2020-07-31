@@ -5,7 +5,7 @@
 #include "binarytree.h"
 
 #define MAX_READ 100
-#define IN_FILE_PATH "../assets/integers.txt"
+#define IN_FILE_PATH "assets/integers.txt"
 
 int* read_integers (const char *path) {
     int *integers = (int *)calloc (MAX_READ, sizeof (int));
@@ -60,9 +60,9 @@ int main (void)
     fgets (buf, 4, stdin);
     int search_integer = (int)strtol (buf, NULL, 10);
 
-    printf ("\n\t%d comparisons were made to find '%d' within tree.\n",
+    printf ("\n\t%d comparisons were made in an attempt to find '%d' within tree.\n",
         lookup_and_count (tree, search_integer), search_integer);
-    printf ("\n\t%d comparisons were made to find '%d' within array.\n", 
+    printf ("\n\t%d comparisons were made in an attempt to find '%d' within array.\n", 
         lookup_and_count_array (integers, search_integer), search_integer);
 
     free (integers);

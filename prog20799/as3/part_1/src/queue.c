@@ -4,6 +4,11 @@ Queue initQueue ()
 {
     Queue qp = (Queue)malloc (sizeof (QType));
 
+    if (qp == NULL) {
+        printf ("Failed to reserve memory for queue!\n");
+        exit (1);
+    }
+
     qp->head = NULL;
     qp->tail = NULL;
 
@@ -15,6 +20,10 @@ bool isEmpty (Queue Q) { return (Q->head == NULL); }
 void enqueue (Queue Q, QueueData d)
 {
     NodePtr np = (NodePtr)malloc (sizeof (Node));
+    if (np == NULL) {
+        printf ("Failed to reserve memory for queue node!\n");
+        exit (1);
+    }
     np->data = d;
     np->next = NULL;
 

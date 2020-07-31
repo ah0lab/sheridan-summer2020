@@ -45,6 +45,7 @@ int main (void)
     printf ("\nQueue with first record removed\n");
     remove_record (customerRecords);
     print_records (customerRecords);
+    free (customerRecords);
 }
 
 float get_totalPrice ()
