@@ -4,7 +4,5 @@
 --  customer and the movies he/she 
 --  is renting.
 --
--- Contributor : Benjamin Ahola
+-- Contributor : 
 ----------------------------------
-CREATE OR REPLACE PROCEDURE 
-ACCEPT p_CustomerName PROMPT 'Enter Customer Name'

@@ -4,5 +4,5 @@
 --  and the number of movies rented 
 --  by him.
 --
--- Contributor : Benjamin Ahola
+-- Contributor : 
 ----------------------------------

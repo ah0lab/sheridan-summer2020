@@ -19,7 +19,7 @@ cat >$out <<HEADER
 --  Name        : Benjamin Ahola
 --  Student ID  : 991361645
 --  -------------
---  Name        : Joshua Clark
+--  Name        :
 --  Student ID  : 
 --  -------------
 -------------------------------

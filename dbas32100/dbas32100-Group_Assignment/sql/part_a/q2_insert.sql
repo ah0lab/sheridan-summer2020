@@ -9,7 +9,7 @@ v_catName VARCHAR2(20);
 BEGIN
 v_catID := &p_catID;
 v_catName := &p_catName;
-INSERT INTO Categories VALUES(v_catID, v_catName);
+INSERT INTO Category_T VALUES(v_catID, v_catName);
 END;
 
 -- Customer Table
@@ -26,7 +26,7 @@ v_custInitial NUMBER;
 v_custFirst VARCHAR2(20);
 v_custLast VARCHAR2(20);
 v_phone VARCHAR2(20);
-v_birth VARCHAR2(20);
+v_birth DATE;
 v_license NUMBER;
 v_status VARCHAR2(20);
 v_ccn NUMBER;
@@ -39,7 +39,7 @@ v_birth := &p_birth;
 v_license := &p_license;
 v_status := &p_status;
 v_ccn := &p_ccn;
-INSERT INTO Customers VALUES(v_custInitial, v_custFirst, v_custLast, v_phone, v_birth,
+INSERT INTO Customer_T VALUES(v_custInitial, v_custFirst, v_custLast, v_phone, v_birth,
 v_license, v_status, v_ccn);
 END;
 
@@ -58,7 +58,7 @@ DECLARE
 v_tapeID NUMBER;
 v_title VARCHAR2(20);
 v_year NUMBER;
-v_purDate VARCHAR2(20);
+v_purDate DATE;
 v_cost NUMBER;
 v_categoryID NUMBER;
 v_rentStatus VARCHAR2(20);
@@ -76,7 +76,7 @@ v_rentStatus := &p_rentStatus;
 v_rating := &p_rating;
 v_action := &p_action;
 v_reserved := &p_reserved;
-INSERT INTO Movies VALUES(v_tapeID, v_title, v_year, v_purDate, v_cost, v_categoryID, v_rentStatus,
+INSERT INTO Titles_T VALUES(v_tapeID, v_title, v_year, v_purDate, v_cost, v_categoryID, v_rentStatus,
 v_rating, v_action, v_reserved);
 END;
 
@@ -87,7 +87,7 @@ ACCEPT p_custInitials PROMPT 'Enter Customer Initials:'
 ACCEPT p_tapeID PROMPT 'Enter Tape ID:'
 DECLARE
 v_RentalID NUMBER;
-v_rentDate VARCHAR2(20);
+v_rentDate DATE;
 v_custInitials VARCHAR2(3);
 v_tapeID NUMBER;
 BEGIN
@@ -95,7 +95,7 @@ v_RentalID := &p_RentalID;
 v_rentDate := &p_rentDate;
 v_custInitials := &p_custInitials;
 v_tapeID := &p_tapeID;
-INSERT INTO Rentals VALUES(v_RentalID, v_rentDate, v_custInitials, v_tapeID);
+INSERT INTO Rental_T VALUES(v_RentalID, v_rentDate, v_custInitials, v_tapeID);
 END;
 -- Contributor : Joshua Clark
 ----------------------------------
