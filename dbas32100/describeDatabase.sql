@@ -1,0 +1,9 @@
+SELECT owner, TABLE_NAME
+FROM all_tables 
+WHERE owner IN ('SI', 'HR');
+
+DESCRIBE SI.Cars;
+DESCRIBE SI.Customer;
+DESCRIBE SI.SALEINV;
+
+SELECT * FROM SI.SALEINV;
