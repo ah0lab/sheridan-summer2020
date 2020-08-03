@@ -8,6 +8,7 @@
 --
 -- Contributor : Benjamin Ahola 
 ----------------------------------
+SET serveroutput ON;
 CREATE OR REPLACE PROCEDURE Get_Total_Spent (v_custname in VARCHAR2)
 IS
     v_totalspent NUMBER;
@@ -18,4 +19,4 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE (v_custname|| ' has spent a total of ' ||v_totalspent);
 END;
 
-EXECUTE Get_Total_Spent ('EMMA HOBDEN');
+EXECUTE Get_Total_Spent ('MITUL RAMI');
