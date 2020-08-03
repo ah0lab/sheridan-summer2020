@@ -7,6 +7,8 @@
 --  three values must be entered by 
 --  the user. Use SI database.
 --
+-- Contributor : Joshua Clark
+----------------------------------
 ACCEPT cmake PROMPT 'Enter a carmake';
 ACCEPT cmodel PROMPT 'Enter a car model';
 ACCEPT cyear PROMPT 'Enter the car year';
@@ -30,5 +32,3 @@ END LOOP;
 CLOSE custdetails;
 END;
 /
--- Contributor : Joshua Clark
-----------------------------------
