@@ -4,6 +4,8 @@
 --  renting cost and highest renting 
 --  cost? Display their names/titles.
 --
+-- Contributor : Joshua Clark
+----------------------------------
 CREATE OR REPLACE PROCEDURE highcost()
 IS
 v_title Titles_T.Title%type;
@@ -15,5 +17,3 @@ DBMS_OUTPUT.PUT_LINE('Here are the movies that are the most expensive and cheape
 END;
 /
 EXECUTE highcost();
--- Contributor : Joshua Clark
-----------------------------------

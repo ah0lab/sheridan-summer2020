@@ -4,6 +4,8 @@
 --  right now to rent out? Display 
 --  their names/titles.
 --
+-- Contributor : Joshua Clark
+----------------------------------
 CREATE OR REPLACE PROCEDURE avail ()
 IS
 v_title Titles_T.Title%type;
@@ -15,5 +17,3 @@ DBMS_OUTPUT.PUT_LINE('Here are the movies currentlly available ' || v_title);
 END;
 /
 EXECUTE avail();
--- Contributor : Joshua Clark
-----------------------------------

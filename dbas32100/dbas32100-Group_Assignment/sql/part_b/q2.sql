@@ -8,16 +8,14 @@
 --
 -- Contributor : Benjamin Ahola 
 ----------------------------------
-SET serveroutput ON;
-
-CREATE OR REPLACE Get_Total_Spent (v_custname in VARCHAR2)
+CREATE OR REPLACE PROCEDURE Get_Total_Spent (v_custname in VARCHAR2)
 IS
-    v_totalspent si.Car.CarSalePrice%TYPE;
+    v_totalspent NUMBER;
 BEGIN
-    SELECT SUM (CarSalePrice) IN v_totalspent
+    SELECT SUM (CarSalePrice) INTO v_totalspent
         FROM si.SaleInv WHERE CustName = v_custname;
 
-    DBMS_OUTPUT.PUT_LINE (v_totalspent);
+    DBMS_OUTPUT.PUT_LINE (v_custname|| ' has spent a total of ' ||v_totalspent);
 END;
 
 EXECUTE Get_Total_Spent ('EMMA HOBDEN');
