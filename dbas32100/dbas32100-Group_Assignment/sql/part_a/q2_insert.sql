@@ -1,9 +1,6 @@
 ----------------------------------
 -- QUESTION 2 - Insert
 -- Category Table
---
--- Contributor : Joshua Clark
-----------------------------------
 ACCEPT p_catID PROMPT 'Enter Category ID'
 ACCEPT p_catName PROMPT 'Eenter Category Name:'
 DECLARE
@@ -100,3 +97,5 @@ v_custInitials := &p_custInitials;
 v_tapeID := &p_tapeID;
 INSERT INTO Rental_T VALUES(v_RentalID, v_rentDate, v_custInitials, v_tapeID);
 END;
+-- Contributor : Joshua Clark
+----------------------------------

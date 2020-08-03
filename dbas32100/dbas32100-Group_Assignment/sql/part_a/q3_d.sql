@@ -4,9 +4,5 @@
 --  and the number of movies rented 
 --  by him.
 --
--- Contributor : Benjamin Ahola
+-- Contributor : 
 ----------------------------------
-SELECT CONCAT FIRSTNAME, LASTNAME, COUNT (TapeID) AS "Movies Rented"
-    FROM Customer_T c JOIN Rental_T r
-        ON c.CustomerID = r.CustomerID
-    GROUP BY (FIRSTNAME, LASTNAME);

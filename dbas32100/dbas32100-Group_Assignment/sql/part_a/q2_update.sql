@@ -2,8 +2,6 @@
 -- QUESTION 2 - Update 
 --Update
 --Category Table
--- Contributor : Joshua Clark
-----------------------------------
 ACCEPT p_catID PROMPT 'Enter Category ID'
 ACCEPT p_catName PROMPT 'Eenter Category Name:'
 DECLARE
@@ -108,3 +106,5 @@ UPDATE Rental_T
 SET RentalID =  v_RentalID, RentalDate = v_rentDate, CustomerID = v_custInitials, TapeID = v_tapeID
 WHERE RentalID = &p_RentalID;
 END;
+-- Contributor : Joshua Clark
+----------------------------------
