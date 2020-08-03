@@ -166,7 +166,7 @@ INSERT INTO Titles_T (TapeID, Title, YearReleased, DatePurchased, Cost, Category
 VALUES (9, 'Star Trek: Nemesis', 2005, '23-OCT-2005', 3.99, 8, 'Yes', 'PG', 
         'Return to Shelf', '');
 
--- Titles_T Data --
+-- Rental_T Data --
 INSERT INTO Rental_T (RentalID, RentalDate, CustomerID, TapeID)
     VALUES (1000, '2-DEC-2011', 1002, 10);
 INSERT INTO Rental_T (RentalID, RentalDate, CustomerID, TapeID)
