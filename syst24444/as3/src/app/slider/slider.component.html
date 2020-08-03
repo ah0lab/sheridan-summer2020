@@ -1,1 +1,13 @@
-<p>slider works!</p>
+<section class="slider">
+    <figure class="slide-content">
+        <img class="slide-img" src="{{getSlideAt(getCurrentIndex()).getSlideImage ()}}" />
+        <figcaption class="slide-details"> 
+            <h4 class="slide-details-title">{{getSlideAt(getCurrentIndex()).getSlideTitle ()}}</h4>
+            <h5 class="slide-details-desc">{{getSlideAt(getCurrentIndex()).getSlideDesc ()}}</h5>
+        </figcaption>
+    </figure>
+    <nav class="slider-nav">
+        <button class="slider-nav-btn btn--next" (click)="next()" >Next</button>
+        <button class="slider-nav-btn btn--prev" (click)="previous()" >Prev</button>
+    </nav>
+</section>
