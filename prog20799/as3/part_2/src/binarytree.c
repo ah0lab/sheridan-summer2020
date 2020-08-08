@@ -6,6 +6,10 @@
 TreeNode* newTreeNode (int number)
 {
     TreeNode *node = (TreeNode *)malloc (sizeof (TreeNode));
+    if (node == NULL) {
+        printf ("Unable to reserve memory for tree node!\n");
+        exit (1);
+    }
     node->number = number;
     node->left = node->right = NULL;
 
