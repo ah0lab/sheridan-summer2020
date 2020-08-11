@@ -44,8 +44,12 @@ namespace Assignment.Model
                 Console.WriteLine ("Incomplete Dataset!");
                 return null;
             }
+
+            Console.WriteLine (DateTime.Parse (dataset[5].ToString()));
+            Console.WriteLine (DateTime.Parse (dataset[6].ToString()));
+
             return new Employee (
-                id              : Int32.Parse (dataset[0].ToString()),
+                id              : (int)dataset[0],
                 firstname       : dataset[1].ToString(),
                 lastname        : dataset[2].ToString(),
                 title           : dataset[3].ToString(),
@@ -62,7 +66,7 @@ namespace Assignment.Model
                 extension       : dataset[13].ToString(),
                 photo           : dataset[14].ToString(),
                 notes           : dataset[15].ToString(),
-                reportsto       : Int32.Parse (dataset[16].ToString()));
+                reportsto       : (dataset[16] is System.DBNull) ? 0 : (int)dataset[16]);
         }
 
         override public string ToString() 

@@ -27,7 +27,7 @@ namespace Assignment.Test
         {
             List<Employee> retrievedEmployees = EmployeeController.GetEmployeeByFirstName ("Davolio");
             foreach (Employee e in retrievedEmployees) {
-                Console.WriteLine (e);
+                TestContext.Out.WriteLine (e);
             }
         }
 
