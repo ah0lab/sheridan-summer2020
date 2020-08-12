@@ -1,0 +1,35 @@
+{
+    "title": "Final Exam",
+    "products": [
+        {
+            "name": "product 1",
+            "price": 500,
+            "numberOfItems": 5
+        },
+        {
+            "name": "product 2",
+            "price": 100,
+            "numberOfItems": 50
+        },
+        {
+            "name": "product 3",
+            "price": 300,
+            "numberOfItems": 5
+        },
+        {
+            "name": "product 4",
+            "price": 50,
+            "numberOfItems": 15
+        },
+        {
+            "name": "product 5",
+            "price": 1500,
+            "numberOfItems": 10
+        },
+        {
+            "name": "product 6",
+            "price": 400,
+            "numberOfItems": 8
+        }
+    ]
+}
