@@ -1,0 +1,19 @@
+<section>
+    <header>
+        <h3 class="city">{{city.value}}</h3>
+    </header>
+    <section>
+        <h4>Temperature:</h4><p class="reading">{{temp}} degrees</p>
+        <h4>Lat:</h4><p class="reading">{{long}}</p>
+        <h4>Long:</h4><p class="reading">{{lat}}</p>
+    </section>
+    <form>
+        <label>City
+            <input type="text" [formControl]="city" />
+        </label>
+        <button (click)="retrieveData()">Retrieve Data</button>
+    </form>
+</section>
+<section class="footer">
+    <h5> Benjamin Ahola - 991361645</h5>
+</section>
