@@ -1,1 +1,11 @@
-<p>main works!</p>
+<section>
+    <ul>
+        <li *ngFor="let product of products">
+            <div [ngStyle]="(product.Quantity < 10) && {'color':'red'}">
+                <p>{{product.Name}}</p>
+                <p>{{product.Price}}</p>
+                <p>{{product.Quantity}}</p>
+            </div>
+        </li>
+    </ul>
+</section>
