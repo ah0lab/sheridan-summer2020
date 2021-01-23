@@ -1,29 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-#define MAX_SIZE 50
+#define MAX_LABEL_SIZE 50
 #define MAX_VERT 50
 
+/*
+ * EDGE
+ */
 typedef struct gEdge {
     int child, weight;
     struct gEdge *nextEdge;
 }GEdge, *GEdgePtr;
 
-typedef struct {
-    char label[MAX_SIZE + 1], colour;
-    int parent, cost, discover, finish, inDegree;
-    GEdgePtr firstEdge;
-} GVertex;
-
-GVertex newGVertex (char name[])
-{
-    GVertex temp;
-    strcpy (temp.label, name);
-    temp.firstEdge = NULL;
-
-    return temp;
-}
-
+// Edge Creation
 GEdgePtr newGEdge (int c, int weight)
 {
     GEdgePtr p = (GEdgePtr)malloc (sizeof (GEdge));
@@ -34,11 +24,35 @@ GEdgePtr newGEdge (int c, int weight)
     return p;
 }
 
+/*
+ * VERTEX
+ */
+typedef struct {
+    char label[MAX_LABEL_SIZE + 1], colour;
+    int parent, cost, discover, finish, inDegree;
+    GEdgePtr firstEdge;
+} GVertex;
+
+// Vertex Creation
+GVertex newGVertex (char name[])
+{
+    GVertex temp;
+    strcpy (temp.label, name);
+    temp.firstEdge = NULL;
+
+    return temp;
+}
+
+/*
+ * GRAPH
+ */
 typedef struct graph {
     int vCount;
     GVertex verts[MAX_VERT + 1];
 } *Graph;
 
+
+// Graph Creation
 Graph newGraph (int vCount)
 {
     if (vCount > MAX_VERT) { printf ("Error: Too many verts!"); exit (1); }
@@ -88,11 +102,12 @@ void addEdge (char nodeLabel[], char adjacentLabel[], int weight, Graph g)
 void buildGraph (FILE *in, Graph g)
 {
     int j, k, eCount, weight;
-    char nodeLabel[MAX_SIZE + 1], adjacentLabel[MAX_SIZE + 1];
+    char nodeLabel[MAX_LABEL_SIZE + 1], adjacentLabel[MAX_LABEL_SIZE + 1];
 
     // 1. Read lables of verts
     for (j = 0; j < g->vCount; j++) {
         g->verts[j] = newGVertex("");
+        // Read in label
         fscanf (in, "%s", g->verts[j].label);
     }
 
@@ -128,4 +143,14 @@ int main (void)
         printf ("cannot open the file");
         exit (1);
     }
+       
+    // Read first line
+    fscanf (in, "%d", &vCount);
+    Graph G = newGraph (vCount);
+
+    buildGraph (in, G);
+
+    printf ("The graph has been built based on graph 1 file\n");
+    printGraph (G);
+    fclose (in);
 }

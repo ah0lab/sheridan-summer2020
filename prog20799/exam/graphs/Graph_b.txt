@@ -1,0 +1,9 @@
+7
+A B C D E F G
+A 2 B 32 C 49
+B 2 D 60 E 50
+C 1 G 63 
+D 1 E 48 
+E 2 C 59 F 29
+F 1 D 18 
+G 2 E 45 F 39
